@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Architecture Comparison</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6fb;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 1100px;
+      background-color: #ffffff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    th {
+      background-color: #4a6fd1;
+      color: white;
+      padding: 14px;
+      border: 1px solid #2f3e75;
+      font-size: 16px;
+    }
+
+    td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    td:first-child {
+      font-weight: bold;
+      background-color: #eef2ff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e6ecff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Architecture Comparison Matrix</h1>
+
+  <table>
+    <tr>
+      <th>Dimension</th>
+      <th>Async Worker-Based</th>
+      <th>Modular Monolith</th>
+      <th>Event-Driven Architecture</th>
+      <th>Microservices Architecture</th>
+    </tr>
+
+    <tr>
+      <td>Latency</td>
+      <td>Medium (queue adds slight delay)</td>
+      <td>Lowest (in-process calls)</td>
+      <td>Medium–High (event propagation delay)</td>
+      <td>High (multiple network hops)</td>
+    </tr>
+
+    <tr>
+      <td>Throughput</td>
+      <td>High (parallel workers + queue)</td>
+      <td>Medium (limited by single machine)</td>
+      <td>High (stream processing + parallel consumers)</td>
+      <td>Very High (independent service scaling)</td>
+    </tr>
+
+    <tr>
+      <td>Scalability</td>
+      <td>Horizontal (add more workers)</td>
+      <td>Low (mostly vertical scaling)</td>
+      <td>Very High (partitioned event streams)</td>
+      <td>Very High (independent scaling per service)</td>
+    </tr>
+
+    <tr>
+      <td>Complexity</td>
+      <td>Medium (queue + worker coordination)</td>
+      <td>Low (single codebase)</td>
+      <td>High (event coordination, debugging)</td>
+      <td>Very High (distributed system overhead)</td>
+    </tr>
+
+    <tr>
+      <td>Fault Tolerance</td>
+      <td>High (queue retries, worker isolation)</td>
+      <td>Low (single point of failure)</td>
+      <td>Very High (replay, decoupled services)</td>
+      <td>High (service isolation, coordination needed)</td>
+    </tr>
+
+  </table>
+
+</body>
+
+</html>

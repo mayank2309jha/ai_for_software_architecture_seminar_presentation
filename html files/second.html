@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Miro AI Architecture Diagram</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .box {
+      border: 3px solid #4a6fd1;
+      padding: 15px 20px;
+      background-color: #ffffff;
+      text-align: center;
+      max-width: 220px;
+      word-wrap: break-word;
+    }
+
+    .center-box {
+      background-color: #4a6fd1;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 20px 30px;
+    }
+
+    .arrow {
+      font-size: 28px;
+      color: #4a6fd1;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .outputs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .purpose {
+      border: 3px solid #4a6fd1;
+      padding: 20px;
+      max-width: 500px;
+      text-align: center;
+      background-color: #ffffff;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Input -->
+    <div class="box">
+      <div class="label">Input</div>
+      Text Requirements
+    </div>
+
+    <div class="arrow">→</div>
+
+    <!-- Center -->
+    <div class="center-box">
+      MIRO AI
+    </div>
+
+    <div class="arrow">→</div>
+
+    <!-- Outputs -->
+    <div class="outputs">
+      <div class="box">
+        <div class="label">Output</div>
+        Visual Diagram
+      </div>
+
+      <div class="box">
+        <div class="label">Output</div>
+        Architecture Description
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Purpose -->
+  <div class="purpose">
+    <b>Purpose:</b> Generate visual diagrams and architecture descriptions from text-based requirements
+  </div>
+
+</body>
+
+</html>

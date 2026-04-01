@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Debt</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* 🔥 Bigger Header */
+    .header {
+      background-color: #1767b1;
+      color: white;
+      padding: 40px 50px;
+      font-size: 64px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      gap: 50px;
+      padding: 60px;
+      height: calc(100vh - 120px);
+    }
+
+    /* spacing preserved */
+    .left {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 🔥 Bigger Cards */
+    .card {
+      background: #eef2f7;
+      border-radius: 18px;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background-color: #1767b1;
+      color: white;
+      padding: 24px 30px;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .card-body {
+      padding: 35px;
+      font-size: 32px;
+      line-height: 1.6;
+    }
+
+    .green-header {
+      background-color: #0b5d0b;
+      color: white;
+      padding: 24px 30px;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    ul {
+      line-height: 2;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* 🔥 Bigger Bottom Box */
+    .bottom {
+      background-color: #e9e2e2;
+      padding: 30px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 32px;
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    /* 🔥 Bigger Chart */
+    .chart-container {
+      width: 100%;
+      max-width: 650px;
+      text-align: center;
+    }
+
+    .chart-title {
+      font-size: 34px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .chart-container img {
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+      border: 3px solid #333;
+      border-radius: 8px;
+      background: white;
+    }
+
+    .legend {
+      margin-top: 18px;
+      font-size: 22px;
+    }
+
+    .legend a {
+      text-decoration: none;
+      color: #1767b1;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    Technical Debt: The Cost of Bad Architecture
+  </div>
+
+  <div class="container">
+
+    <!-- Left -->
+    <div class="left">
+
+      <div class="card">
+        <div class="card-header">What is Technical Debt?</div>
+        <div class="card-body">
+          The <b>accumulated cost</b> of poor architectural decisions over time.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="green-header">Examples</div>
+        <div class="card-body">
+          <ul>
+            <li><b>Tight coupling</b> → hard to scale</li>
+            <li><b>Monolith</b> → slows development</li>
+            <li><b>No separation of concerns</b> → fragile changes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom">
+        "Bad architecture = exponential technical debt"
+      </div>
+
+    </div>
+
+    <!-- Right -->
+    <div class="right">
+
+      <div class="chart-container">
+        <div class="chart-title">Technical Debt Growth Over Time</div>
+
+        <img src="tech_debt.png" alt="Technical Debt Graph">
+
+        <div class="legend">
+          <a href="https://agilemodeling.com/essays/costOfChange.htm" target="_blank">
+            Reference
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Async Workers Architecture</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* HEADER (UNCHANGED STYLE) */
+    .header {
+      background-color: #2b6aa3;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 54px;
+    }
+
+    .header .subtitle {
+      font-size: 26px;
+      margin-top: 10px;
+    }
+
+    /* CONTENT AREA */
+    .content {
+      background-color: #d3d3d3;
+      height: calc(100vh - 160px);
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    /* FLOW DIAGRAM */
+    .flow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .box {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      font-size: 20px;
+      text-align: center;
+      min-width: 140px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .arrow {
+      font-size: 24px;
+    }
+
+    /* KEY POINTS */
+    .points {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 26px;
+      line-height: 1.6;
+    }
+
+    .point {
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #2b6aa3;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>AI for Software Architecture</h1>
+    <div class="subtitle">Async Worker-Based System (Claude Recommendation)</div>
+  </div>
+
+  <div class="content">
+
+    <div class="title">Research Synthesis</div>
+
+    <!-- FLOW DIAGRAM -->
+    <div class="flow">
+      <div class="box">Client</div>
+      <div class="arrow">→</div>
+      <div class="box">Ingest Gateway</div>
+      <div class="arrow">→</div>
+      <div class="box">Kafka (Queue)</div>
+      <div class="arrow">→</div>
+      <div class="box">Workers</div>
+      <div class="arrow">→</div>
+      <div class="box">Metrics / Output</div>
+    </div>
+
+    <!-- KEY POINTS -->
+    <div class="points">
+
+      <div class="point">
+        <span class="highlight">1. Decoupled Ingestion:</span>
+        Orders are instantly written to Kafka, separating request handling from processing.
+      </div>
+
+      <div class="point">
+        <span class="highlight">2. Parallel Workers (No Locks):</span>
+        Each worker handles a partition → no shared state → no locking → high throughput.
+      </div>
+
+      <div class="point">
+        <span class="highlight">3. Replayable State:</span>
+        Workers rebuild state from Kafka logs → durability without database bottlenecks.
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

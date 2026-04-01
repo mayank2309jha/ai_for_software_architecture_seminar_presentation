@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Where Do Humans Struggle?</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Header */
+    .header {
+      background-color: #1767b1;
+      color: white;
+      padding: 35px 50px;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+      gap: 50px;
+      padding: 60px;
+      height: calc(100vh - 110px);
+    }
+
+    .left,
+    .right {
+      flex: 1;
+    }
+
+    /* Card */
+    .card {
+      background: #eef2f7;
+      border-radius: 16px;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .card-header {
+      background-color: #1767b1;
+      color: white;
+      padding: 20px 25px;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .card-body {
+      padding: 30px;
+      font-size: 24px;
+      line-height: 1.7;
+    }
+
+    ul {
+      margin-top: 15px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* Large emphasis bullets */
+    .big-points {
+      margin-top: 20px;
+      font-size: 30px;
+    }
+
+    /* Bottom Insight */
+    .insight-header {
+      background-color: #9b2323;
+      color: white;
+      padding: 20px 25px;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .insight-body {
+      background-color: #f3eaea;
+      padding: 25px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    /* Diagram */
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .flow-box {
+      padding: 20px 30px;
+      border-radius: 14px;
+      font-size: 26px;
+      text-align: center;
+      width: 320px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .req {
+      background: #cfd8e6;
+    }
+
+    .human {
+      background: #e7caa6;
+    }
+
+    .exp {
+      background: #d8cbe0;
+    }
+
+    .guess {
+      background: #e7caca;
+    }
+
+    .risk {
+      background: #d97b7b;
+      font-weight: bold;
+    }
+
+    .arrow {
+      font-size: 32px;
+      color: #1767b1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    Where Do Humans Struggle?
+  </div>
+
+  <div class="container">
+
+    <!-- Left -->
+    <div class="left">
+
+      <div class="card">
+        <div class="card-header">Human Limitations</div>
+        <div class="card-body">
+          <ul>
+            <li>Limited ability to <b>explore large design spaces</b></li>
+            <li>Cannot <b>predict future system behavior</b> accurately</li>
+          </ul>
+
+          <div class="big-points">
+            <ul>
+              <li>Past experience & intuition</li>
+              <li>Rules of thumb (heuristics)</li>
+              <li>Trial & error</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="insight-header">Bridge to AI</div>
+        <div class="insight-body">
+          "Architecture is a decision problem under uncertainty."
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right -->
+    <div class="right">
+
+      <div class="flow">
+
+        <div class="flow-box req">Requirements (Ambiguous)</div>
+        <div class="arrow">↓</div>
+
+        <div class="flow-box human">Human Architect</div>
+        <div class="arrow">↓</div>
+
+        <div class="flow-box exp">Experience + Heuristics</div>
+        <div class="arrow">↓</div>
+
+        <div class="flow-box guess">One-Shot Design Guess</div>
+        <div class="arrow">↓</div>
+
+        <div class="flow-box risk">High Risk of Error</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

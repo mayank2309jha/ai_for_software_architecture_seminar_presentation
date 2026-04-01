@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Candidate Architecture Selection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Header */
+    .header {
+      background-color: #1767b1;
+      color: white;
+      padding: 35px 50px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    /* Subheading */
+    .subtext {
+      background: #e9eef5;
+      padding: 25px;
+      font-size: 26px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Main Layout */
+    .container {
+      padding: 60px;
+      text-align: center;
+    }
+
+    .ai-box {
+      background: #1767b1;
+      color: white;
+      padding: 30px;
+      font-size: 30px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    /* Candidates */
+    .candidates {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .candidate {
+      background: #3f9d4d;
+      color: white;
+      padding: 25px 35px;
+      border-radius: 16px;
+      font-size: 26px;
+      min-width: 180px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Arrows */
+    .arrow-down {
+      font-size: 40px;
+      margin: 10px 0;
+      color: #1767b1;
+    }
+
+    .arrow-row {
+      display: flex;
+      justify-content: center;
+      gap: 160px;
+      font-size: 32px;
+      color: #999;
+    }
+
+    /* Human decision */
+    .human-box {
+      background: #7d2aa5;
+      color: white;
+      padding: 35px;
+      font-size: 30px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 30px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Final selection */
+    .final {
+      margin-top: 30px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    AI-Assisted Architecture Decision Making
+  </div>
+
+  <!-- Subtext -->
+  <div class="subtext">
+    AI generates <b>multiple candidate architectures</b>, enabling humans to make informed decisions based on analysis.
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+
+    <!-- AI -->
+    <div class="ai-box">
+      AI System
+    </div>
+
+    <div class="arrow-down">↓</div>
+
+    <!-- Candidates -->
+    <div class="candidates">
+      <div class="candidate">Architecture A</div>
+      <div class="candidate">Architecture B</div>
+      <div class="candidate">Architecture C</div>
+    </div>
+
+    <div class="arrow-row">
+      <div>↓</div>
+      <div>↓</div>
+      <div>↓</div>
+    </div>
+
+    <!-- Human -->
+    <div class="human-box">
+      Human Decision Maker<br>
+      <span style="font-size:22px;">Evaluates trade-offs & selects best architecture</span>
+    </div>
+
+    <!-- Final -->
+    <div class="final">
+      Final Selected Architecture
+    </div>
+
+  </div>
+
+</body>
+
+</html>

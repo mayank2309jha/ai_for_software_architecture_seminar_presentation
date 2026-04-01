@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Architecture Selection Flow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6fb;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .slide {
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border: 4px solid #4a6fd1;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 15px 0;
+    }
+
+    .box {
+      border: 2px solid #4a6fd1;
+      padding: 10px;
+      text-align: center;
+      background: #fff;
+      width: 180px;
+      font-size: 14px;
+    }
+
+    .highlight {
+      background: #4a6fd1;
+      color: white;
+      font-weight: bold;
+    }
+
+    .arrow {
+      font-size: 24px;
+      color: #4a6fd1;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    th {
+      background: #4a6fd1;
+      color: white;
+      padding: 6px;
+      border: 1px solid #333;
+    }
+
+    td {
+      border: 1px solid #ccc;
+      padding: 6px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slide">
+
+    <h1>Claude Architecture Decision Flow</h1>
+
+    <!-- Problem -->
+    <div class="row">
+      <div class="box">
+        <b>Problem</b><br>
+        High throughput<br>
+        Low latency<br>
+        Burst handling
+      </div>
+    </div>
+
+    <!-- Candidates -->
+    <div class="section-title">Candidate Architectures</div>
+    <div class="row">
+      <div class="box">Modular Monolith</div>
+      <div class="box">Async Workers</div>
+      <div class="box">Microservices</div>
+    </div>
+
+    <!-- Flow -->
+    <div class="row">
+      <div class="arrow">↓</div>
+    </div>
+
+    <!-- Evaluation -->
+    <div class="section-title">Evaluation Criteria</div>
+    <div class="row">
+      <div class="box">Latency</div>
+      <div class="box">Throughput</div>
+      <div class="box">Scalability</div>
+      <div class="box">Complexity</div>
+    </div>
+
+    <!-- Comparison Table -->
+    <table>
+      <tr>
+        <th>Architecture</th>
+        <th>Latency</th>
+        <th>Throughput</th>
+        <th>Scalability</th>
+        <th>Complexity</th>
+      </tr>
+      <tr>
+        <td>Monolith</td>
+        <td>Low</td>
+        <td>Medium</td>
+        <td>Low</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td>Async Workers</td>
+        <td>Medium</td>
+        <td>High</td>
+        <td>High</td>
+        <td>Medium</td>
+      </tr>
+      <tr>
+        <td>Microservices</td>
+        <td>High</td>
+        <td>Very High</td>
+        <td>Very High</td>
+        <td>Very High</td>
+      </tr>
+    </table>
+
+    <!-- Decision Flow -->
+    <div class="row" style="margin-top:20px;">
+      <div class="box">
+        Monolith rejected<br>
+        (scaling limits)
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="box highlight">
+        Async Workers<br>
+        Balanced choice
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="box">
+        Microservices rejected<br>
+        (too complex)
+      </div>
+    </div>
+
+    <!-- Key Insight -->
+    <div class="row" style="margin-top:20px;">
+      <div class="box highlight" style="width: 100%;">
+        Final Insight: Partitioning + Async Processing = Optimal Tradeoff
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Software Architecture Challenges</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Header */
+    .header {
+      background-color: #1767b1;
+      color: white;
+      padding: 30px 40px;
+      font-size: 34px;
+      font-weight: bold;
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .left,
+    .right {
+      flex: 1;
+    }
+
+    /* Card */
+    .card {
+      background: #eef2f7;
+      border-radius: 14px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      margin-bottom: 35px;
+    }
+
+    .card-header {
+      background-color: #1767b1;
+      color: white;
+      padding: 18px 20px;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .card-body {
+      padding: 25px;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 15px;
+      line-height: 1.8;
+    }
+
+    /* Key Insight */
+    .insight-header {
+      background-color: #9b2323;
+      color: white;
+      padding: 18px 20px;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .insight-body {
+      background-color: #f3eaea;
+      padding: 25px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    /* Diagram */
+    .diagram {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .box {
+      border-radius: 14px;
+      padding: 30px;
+      margin: 20px auto;
+      width: 75%;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    .fr {
+      background-color: #cfd8e6;
+      border: 2px solid #555;
+    }
+
+    .nfr {
+      background-color: #e7caa6;
+      border: 2px solid #555;
+    }
+
+    .arrow {
+      font-size: 36px;
+      color: #1767b1;
+      margin: 15px 0;
+    }
+
+    .note {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 20px;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    What Makes Software Architecture Hard?
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+
+    <!-- Left -->
+    <div class="left">
+
+      <div class="card">
+        <div class="card-header">The Core Challenge</div>
+        <div class="card-body">
+          Software architecture requires balancing <b>complex trade-offs:</b>
+          <ul>
+            <li>Scalability vs. Cost</li>
+            <li>Performance vs. Maintainability</li>
+            <li>Speed vs. Reliability</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="insight-header">Key Insight</div>
+        <div class="insight-body">
+          Architecture decisions are expensive to change later.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right -->
+    <div class="right">
+
+      <div class="card">
+        <div class="card-header">Two Types of Requirements</div>
+
+        <div class="diagram">
+
+          <div class="box fr">
+            <b>FR (Functional)</b><br>
+            <i>What the system does</i>
+          </div>
+
+          <div class="arrow">↓</div>
+
+          <div class="box nfr">
+            <b>NFR (Non-Functional)</b><br>
+            <i>How well it does it</i>
+          </div>
+
+          <div class="note">
+            Architecture is primarily driven by NFRs
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
