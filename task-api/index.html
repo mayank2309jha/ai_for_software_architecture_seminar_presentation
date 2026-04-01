@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Task Monitor</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px;
+    }
+
+    .task {
+      margin: 5px 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .pending {
+      background: #fff3cd;
+    }
+
+    .processing {
+      background: #cce5ff;
+    }
+
+    .completed {
+      background: #d4edda;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Task Dashboard</h1>
+
+  <button onclick="createTask()">Create Task</button>
+  <button onclick="processTasks()">Process Tasks</button>
+
+  <div id="tasks"></div>
+
+  <script>
+    async function createTask() {
+      await fetch('/task', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ value: Math.random() })
+      });
+    }
+
+    async function processTasks() {
+      await fetch('/process', { method: 'POST' });
+    }
+
+    async function loadTasks() {
+      const res = await fetch('/tasks');
+      const data = await res.json();
+
+      const container = document.getElementById('tasks');
+      container.innerHTML = '';
+
+      data.forEach(task => {
+        const div = document.createElement('div');
+        div.className = `task ${task.status}`;
+        div.innerText = `${task.id} - ${task.status}`;
+        container.appendChild(div);
+      });
+    }
+
+    // auto refresh
+    setInterval(loadTasks, 1000);
+  </script>
+
+</body>
+
+</html>
